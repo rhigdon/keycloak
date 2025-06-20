@@ -15,7 +15,8 @@ export type ClientTab =
   | "serviceAccount"
   | "permissions"
   | "sessions"
-  | "events";
+  | "events"
+  | "attributes";
 
 export type ClientParams = {
   realm: string;

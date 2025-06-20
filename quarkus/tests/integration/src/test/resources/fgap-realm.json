@@ -2675,6 +2675,7 @@
   "userManagedAccessAllowed" : false,
   "organizationsEnabled" : false,
   "verifiableCredentialsEnabled" : false,
+  "enableClientAttributeEditing" : false,
   "adminPermissionsEnabled" : true,
   "clientProfiles" : {
     "profiles" : [ ]
