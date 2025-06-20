@@ -76,6 +76,7 @@ import { getProtocolName, isRealmClient } from "./utils";
 import { UserEvents } from "../events/UserEvents";
 import { useIsAdminPermissionsClient } from "../utils/useIsAdminPermissionsClient";
 import { AdminEvents } from "../events/AdminEvents";
+import { AttributesForm } from "../components/key-value-form/AttributeForm";
 
 type ClientDetailHeaderProps = {
   onChange: (value: boolean) => void;
@@ -250,6 +251,7 @@ export default function ClientDetails() {
   const permissionsTab = useRoutableTab(tab("permissions"));
   const advancedTab = useRoutableTab(tab("advanced"));
   const eventsTab = useRoutableTab(tab("events"));
+  const attributesTab = useRoutableTab(tab("attributes"));
 
   const [activeEventsTab, setActiveEventsTab] = useState("userEvents");
 
@@ -293,6 +295,8 @@ export default function ClientDetails() {
   const authorizationExportTab = useRoutableTab(
     authorizationTabRoute("export"),
   );
+
+  // const attributesTab = useRoutableTab(tab("attributes"));
 
   const [toggleDeleteDialog, DeleteConfirm] = useConfirmDialog({
     titleKey: "clientDeleteConfirmTitle",
@@ -713,6 +717,23 @@ export default function ClientDetails() {
                 </Tabs>
               </Tab>
             )}
+            {true && (
+              <Tab 
+                id="attributes"
+                data-testid="attributes-tab"
+                title={<TabTitleText>{t("attributes")}</TabTitleText>}
+                {...attributesTab}
+                >
+                  <AttributesForm
+                    form={form as any}
+                    // save={save}
+                    fineGrainedAccess={true}
+                    reset={() => {}
+                      // setValue("attributes", attributes, { shouldDirty: false })
+                    }
+                  />
+              </Tab>
+              )}
           </RoutableTabs>
         </FormProvider>
       </PageSection>

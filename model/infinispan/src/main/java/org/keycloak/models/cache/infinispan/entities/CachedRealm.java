@@ -197,6 +197,7 @@ public class CachedRealm extends AbstractExtendableRevisioned {
         organizationsEnabled = model.isOrganizationsEnabled();
         adminPermissionsEnabled = model.isAdminPermissionsEnabled();
         verifiableCredentialsEnabled = model.isVerifiableCredentialsEnabled();
+        //TODO: Add enabledClientAttributes
         //--- brute force settings
         bruteForceProtected = model.isBruteForceProtected();
         permanentLockout = model.isPermanentLockout();

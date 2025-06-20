@@ -125,6 +125,8 @@ public interface RealmModel extends RoleContainerModel {
 
     void setVerifiableCredentialsEnabled(boolean verifiableCredentialsEnabled);
 
+    //TODO add enableClientAttributeEditing
+
     void setAttribute(String name, String value);
     default void setAttribute(String name, Boolean value) {
         setAttribute(name, value.toString());

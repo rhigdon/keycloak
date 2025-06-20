@@ -236,6 +236,21 @@ public class RealmEntity {
     @MapKey(name="locale")
     Map<String, RealmLocalizationTextsEntity> realmLocalizationTexts = new HashMap<>();
 
+    @Column(name = "CLIENT_ATTR_EDITING_ENABLED")
+    private Boolean enableClientAttributeEditing;
+
+    public Boolean isEnableClientAttributeEditing() {
+        return this.enableClientAttributeEditing;
+    }
+
+    public Boolean getEnableClientAttributeEditing() {
+        return this.enableClientAttributeEditing;
+    }
+
+    public void setEnableClientAttributeEditing(Boolean enableClientAttributeEditing) {
+        this.enableClientAttributeEditing = enableClientAttributeEditing;
+    }
+
     public String getId() {
         return id;
     }

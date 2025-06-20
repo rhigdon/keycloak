@@ -245,6 +245,11 @@ function RealmSettingsGeneralTabForm({
               labelIcon={t("verifiableCredentialsEnabledHelp")}
             />
           )}
+          <DefaultSwitchControl
+            name="enableClientAttributeEditing"
+            label={t("enableClientAttributeEditing")}
+            labelIcon={t("enableClientAttributeEditingHelp")}
+          />
           <SelectControl
             name="unmanagedAttributePolicy"
             label={t("unmanagedAttributes")}

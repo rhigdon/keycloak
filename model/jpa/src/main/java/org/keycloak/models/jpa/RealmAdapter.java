@@ -1364,6 +1364,14 @@ public class RealmAdapter implements StorageProviderRealmModel, JpaModel<RealmEn
         em.flush();
     }
 
+    public Boolean getEnableClientAttributeEditing() {
+        return realm.getEnableClientAttributeEditing();
+    }
+
+    public void setEnableClientAttributeEditing(Boolean enableClientAttributeEditing) {
+        realm.setEnableClientAttributeEditing(enableClientAttributeEditing);
+    }
+
     @Override
     public Stream<IdentityProviderMapperModel> getIdentityProviderMappersStream() {
         return session.identityProviders().getMappersStream();

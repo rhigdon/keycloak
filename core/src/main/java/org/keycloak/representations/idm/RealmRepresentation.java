@@ -224,6 +224,8 @@ public class RealmRepresentation {
 
     protected Boolean adminPermissionsEnabled;
 
+    private Boolean enableClientAttributeEditing;
+
     @Deprecated
     protected Boolean social;
     @Deprecated
